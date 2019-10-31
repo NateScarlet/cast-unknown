@@ -1,5 +1,5 @@
 module.exports = (env, argv) => {
-  const config = require('./webpack.common.config');
+  const config = require('./webpack.common')();
 
   // config.externals([]);
   config.module

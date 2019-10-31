@@ -1,2 +1,2 @@
---webpack-config webpack.test.config.js
+--webpack-config webpack.dev.js
 tests/**/*.spec.ts

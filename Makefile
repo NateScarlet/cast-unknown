@@ -6,6 +6,6 @@ build: dist
 test:
 	npm run test
 
-dist: src/* webpack.common.config.js webpack.config.js
+dist: src/* webpack.common.js webpack.prod.js
 	rm -rf dist
 	npm run build

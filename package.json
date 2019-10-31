@@ -1,17 +1,16 @@
 {
   "name": "cast-unknown",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Cast unknown value to desired type with typescript support.",
-  "main": "./dist/index.js",
+  "main": "./dist/index.node.js",
+  "browser": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
     "test": "mochapack",
-    "build": "webpack --mode production",
-    "build:demo": "webpack --mode production --config webpack.demo.config.js",
-    "start": "webpack-dev-server --config webpack.demo.config.js",
+    "build": "webpack --mode production --config webpack.prod.js",
     "prepare": "make dist",
     "prepublishOnly": "npm run test"
   },
