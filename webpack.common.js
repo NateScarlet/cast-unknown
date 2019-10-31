@@ -5,7 +5,7 @@ module.exports = (env, argv) => {
   const config = new Config();
 
   config.entry('index').add('./src/index.ts');
-  config.mode('development');
+  config.devtool('source-map');
   config.externals(['moment']);
   config.resolve.alias.set('@', path.resolve(__dirname, 'src'));
   config.resolve.extensions.add('.ts').add('.js');
