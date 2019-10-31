@@ -36,7 +36,7 @@ cast.array(undefined)
 cast.array([null])
 // [null]
 cast.array([undefined])
-// [null]
+// [undefined]
 cast.date('2019-01-01 12:00')
 // <same as `new Date('2019-01-01 12:00')`, but throws cast.CastError if value invalid>
 cast.duration('PT1D')
