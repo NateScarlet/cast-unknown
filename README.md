@@ -17,6 +17,7 @@ Current supported cast target:
 - duration (need `moment` package installed)
 - promise
 - iterable
+- one (one and the only one item from given iterable, otherwise undefined)
 
 ```javascript
 import * as cast from 'cast-unknown';
@@ -62,4 +63,10 @@ cast.iterable(null);
 // []
 cast.iterable(undefined);
 // []
+cast.one(11);
+// 11
+cast.one([12, 13]);
+// undefined
+cast.one([14]);
+// 14
 ```

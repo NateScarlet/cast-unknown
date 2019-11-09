@@ -94,3 +94,16 @@ export function iterable<T>(v: Iterable<T> | T): Iterable<T> {
   }
   return [v as T];
 }
+
+export function one<T>(v: Iterable<T> | T): T | undefined {
+  let ret: T | undefined;
+  let index = 0;
+  for (const i of iterable(v)) {
+    if (index > 0) {
+      return undefined;
+    }
+    ret = i;
+    index += 1;
+  }
+  return ret;
+}
