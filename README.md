@@ -16,6 +16,7 @@ Current supported cast target:
 - date
 - duration (need `moment` package installed)
 - promise
+- iterable
 
 ```javascript
 import * as cast from 'cast-unknown';
@@ -48,4 +49,17 @@ cast.promise(() => 7);
 // async () => 7
 cast.promise(async () => 8);
 // async () => 8
+cast.iterable(9);
+// [9]
+const generator = (function*() {
+  for (let i; i < 10; i++) {
+    yield i;
+  }
+})();
+cast.iterable(generator);
+// generator
+cast.iterable(null);
+// []
+cast.iterable(undefined);
+// []
 ```
