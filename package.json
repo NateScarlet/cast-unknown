@@ -8,6 +8,7 @@
   "files": [
     "dist"
   ],
+  "sideEffects": false,
   "scripts": {
     "test": "mochapack",
     "build": "webpack --mode production --config webpack.prod.js",
