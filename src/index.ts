@@ -62,6 +62,14 @@ export function duration(v: unknown): import('moment').Duration {
   return duration;
 }
 
+/**
+ * Cast value to milliseconds number
+ * need `moment` package installed.
+ */
+export function milliseconds(v: unknown): number {
+  return duration(v).asMilliseconds();
+}
+
 export function array<T>(v: T | T[] | undefined): T[] {
   if (v instanceof Array) {
     return v;

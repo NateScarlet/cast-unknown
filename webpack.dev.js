@@ -1,7 +1,7 @@
 module.exports = (env, argv) => {
   const config = require('./webpack.common')();
 
-  // config.externals([]);
+  config.mode('development');
   config.module
     .rule('typescript')
     .use('babel')
@@ -13,5 +13,8 @@ module.exports = (env, argv) => {
         ],
       ],
     }));
+  if (process.env.TEST_WITHOUT_MOMENT !== '1') {
+    config.externals([]);
+  }
   return config.toConfig();
 };

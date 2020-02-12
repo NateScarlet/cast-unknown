@@ -15,6 +15,7 @@ Current supported cast target:
 - array
 - date
 - duration (need `moment` package installed)
+- milliseconds (need `moment` package installed)
 - promise
 - iterable
 - one (one and the only one item from given iterable, otherwise undefined)
@@ -42,8 +43,10 @@ cast.array([undefined]);
 // [undefined]
 cast.date('2019-01-01 12:00');
 // <same as `new Date('2019-01-01 12:00')`, but throws cast.CastError if value invalid>
-cast.duration('PT1D');
+cast.duration('P1D');
 // <same as `moment.duration("PT1D")`, but throws cast.CastError if value invalid>
+cast.milliseconds('P1D');
+// <same as `cast.duration("PT1D").asMilliseconds()`>
 cast.promise(6);
 // async () => 6
 cast.promise(() => 7);

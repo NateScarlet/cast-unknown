@@ -6,6 +6,7 @@
     "strict": true,
     "moduleResolution": "node",
     "lib": ["dom", "esnext"],
+    "types": ["webpack-env"],
     "declaration": true,
     "baseUrl": "./",
     "allowSyntheticDefaultImports": true,
