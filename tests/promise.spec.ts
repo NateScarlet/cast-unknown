@@ -25,6 +25,9 @@ describe('promise', function() {
   it('promise like', async function() {
     const input: PromiseLike<number> = {
       then(resolve) {
+        if (!resolve) {
+          throw new Error('unexpected');
+        }
         return Promise.resolve(resolve(1));
       },
     };
