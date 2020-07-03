@@ -1,0 +1,6 @@
+require:
+  - ./mocha-require.js
+recursive: true
+extension:
+  - ts
+spec: tests/**/*.spec.*

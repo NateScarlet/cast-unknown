@@ -80,14 +80,30 @@ export function array<T>(v: T | T[] | undefined): T[] {
   return [v];
 }
 
-export function promise<T, TArgs extends unknown[]>(
-  v: T | ((...args: TArgs) => T | Promise<T>)
-): (...args: TArgs) => Promise<T> {
-  return async (...args: TArgs): Promise<T> => {
-    if (typeof v !== 'function') {
-      return v;
+type PromiseConstructor<T, TArgs extends unknown[]> = (
+  ...args: TArgs
+) => T | PromiseLike<T>;
+
+type PromiseInput<T> = T extends () => unknown
+  ? PromiseConstructor<T, Parameters<T>>
+  : T extends () => unknown
+  ? never
+  : PromiseLike<T> | T;
+
+export function promise<T extends PromiseInput<unknown>>(
+  v: T
+): (
+  ...args: T extends (...args: infer TArgs) => unknown ? TArgs : never
+) => Promise<T> {
+  return async (
+    ...args: T extends (...args: infer TArgs) => unknown ? TArgs : never
+  ): Promise<T> => {
+    switch (typeof v) {
+      case 'function':
+        return v(...args);
+      default:
+        return v;
     }
-    return (v as Function)(...args);
   };
 }
 
