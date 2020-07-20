@@ -1,6 +1,6 @@
 {
   "name": "cast-unknown",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Cast unknown value to desired type with typescript support.",
   "main": "./dist/index.node.js",
   "browser": "./dist/index.js",
