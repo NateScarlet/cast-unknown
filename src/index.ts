@@ -123,3 +123,10 @@ export function one<T>(v: Iterable<T> | T): T | undefined {
   }
   return ret;
 }
+
+export function nonNull<T>(v: T): NonNullable<T> {
+  if (v == null) {
+    throw new CastError(`Can not cast to non null: ${v}`);
+  }
+  return v as NonNullable<T>;
+}

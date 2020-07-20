@@ -19,6 +19,7 @@ Current supported cast target:
 - promise
 - iterable
 - one (one and the only one item from given iterable, otherwise undefined)
+- nonNull (not null or undefined)
 
 ```javascript
 import * as cast from 'cast-unknown';
@@ -72,4 +73,10 @@ cast.one([12, 13]);
 // undefined
 cast.one([14]);
 // 14
+cast.nonNull(15);
+// 15
+cast.nonNull(null);
+// <throws cast.CastError>
+cast.nonNull(undefined);
+// <throws cast.CastError>
 ```
