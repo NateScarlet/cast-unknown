@@ -22,7 +22,7 @@ Current supported cast target:
 - nonNull (not null or undefined)
 
 ```javascript
-import * as cast from 'cast-unknown';
+import cast from 'cast-unknown';
 
 cast.string(1);
 // '1'
