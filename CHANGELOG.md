@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/NateScarlet/cast-unknown/compare/v0.1.7...v0.1.8) (2020-08-05)
+
+
+### Features
+
+* add default export ([9107d88](https://github.com/NateScarlet/cast-unknown/commit/9107d88570a45f092187b17d1ec6b0511e28251a))
+
 ### [0.1.7](https://github.com/NateScarlet/cast-unknown/compare/v0.1.5...v0.1.7) (2020-07-20)
 
 
