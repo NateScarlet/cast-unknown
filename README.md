@@ -80,3 +80,7 @@ cast.nonNull(null);
 cast.nonNull(undefined);
 // <throws cast.CastError>
 ```
+
+## related
+
+- [cast-unknown-python](https://github.com/NateScarlet/cast-unknown-python)
