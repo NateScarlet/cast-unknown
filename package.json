@@ -38,7 +38,7 @@
     "@babel/register": "7.14.5",
     "@types/chai": "4.2.19",
     "@types/mocha": "7.0.2",
-    "@types/webpack-env": "1.16.1",
+    "@types/webpack-env": "1.16.2",
     "@typescript-eslint/eslint-plugin": "2.34.0",
     "@typescript-eslint/parser": "2.34.0",
     "babel-loader": "8.2.2",
