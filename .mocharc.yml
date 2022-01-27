@@ -1,5 +1,5 @@
 require:
-  - ./mocha-require.js
+  - ./mocha-require.cjs
 recursive: true
 extension:
   - ts

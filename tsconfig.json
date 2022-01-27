@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
     "module": "esnext",
-    "target": "esnext",
+    "target": "es2018",
     "sourceMap": true,
     "strict": true,
     "moduleResolution": "node",
     "lib": ["dom", "esnext"],
-    "types": ["webpack-env"],
     "declaration": true,
     "baseUrl": "./",
     "allowSyntheticDefaultImports": true,

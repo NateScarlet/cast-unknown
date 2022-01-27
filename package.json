@@ -2,16 +2,19 @@
   "name": "cast-unknown",
   "version": "0.1.8",
   "description": "Cast unknown value to desired type with typescript support.",
-  "main": "./dist/index.node.js",
+  "type": "module",
+  "main": "./dist/index.cjs",
   "browser": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "module": "./dist/index.js",
   "files": [
     "dist"
   ],
   "sideEffects": false,
   "scripts": {
-    "test": "mochapack",
-    "build": "webpack --mode production --config webpack.prod.js",
+    "test": "mocha",
+    "clean": "rimraf dist",
+    "build": "rollup -c",
     "prepare": "make dist",
     "prepublishOnly": "npm run test"
   },
@@ -36,6 +39,8 @@
     "@babel/plugin-transform-runtime": "7.15.0",
     "@babel/preset-env": "7.15.0",
     "@babel/register": "7.15.3",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-typescript": "^8.3.0",
     "@types/chai": "4.2.21",
     "@types/mocha": "7.0.2",
     "@types/webpack-env": "1.16.2",
@@ -47,19 +52,17 @@
     "core-js": "3.16.2",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.15.0",
-    "html-webpack-plugin": "3.2.0",
-    "mocha": "7.2.0",
-    "mochapack": "1.1.15",
-    "moment": "2.29.1",
+    "mocha": "9.2.0",
     "prettier": "1.19.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.66.1",
+    "rollup-plugin-terser": "^7.0.2",
     "ts-loader": "6.2.2",
     "ts-node": "8.10.2",
-    "typescript": "4.3.5",
-    "webpack": "4.46.0",
-    "webpack-chain": "6.5.1",
-    "webpack-cli": "3.3.12"
+    "typescript": "4.5.5"
   },
   "dependencies": {
-    "@babel/runtime": "^7.10.4"
+    "@babel/runtime": "^7.10.4",
+    "date-fns": "^2.28.0"
   }
 }

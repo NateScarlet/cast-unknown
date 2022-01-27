@@ -1,7 +1,7 @@
 export default {
   root: true,
   env: {
-    node: true,
+    browser: true,
   },
   extends: [
     'eslint:recommended',
@@ -11,6 +11,8 @@ export default {
     'prettier/@typescript-eslint',
   ],
   rules: {
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     '@typescript-eslint/no-var-requires': 'off',
   },
   plugins: ['@typescript-eslint'],
