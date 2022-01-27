@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.9](https://github.com/NateScarlet/cast-unknown/compare/v0.1.8...v0.1.9) (2022-01-27)
+
+
+### Features
+
+* support es module ([c8438a4](https://github.com/NateScarlet/cast-unknown/commit/c8438a4fca5bffa08e918933ff8540f982ad2e0f))
+
 ### [0.1.8](https://github.com/NateScarlet/cast-unknown/compare/v0.1.7...v0.1.8) (2020-08-05)
 
 
