@@ -7,13 +7,13 @@
     "moduleResolution": "node",
     "lib": ["dom", "esnext"],
     "declaration": true,
+    "esModuleInterop": true,
     "baseUrl": "./",
-    "allowSyntheticDefaultImports": true,
+    "outDir": "dist",
     "paths": {
       "@": ["src"],
       "@/*": ["src/*"]
     },
-    "outDir": "dist"
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]

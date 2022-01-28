@@ -1,6 +1,6 @@
-require:
-  - ./mocha-require.cjs
-recursive: true
+# require:
+#   - ./mocha-require.cjs
+# recursive: true
 extension:
   - ts
 spec: tests/**/*.spec.*
