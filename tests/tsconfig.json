@@ -1,6 +1,6 @@
 {
   "extends": "../tsconfig.json",
   "compilerOptions": {
-    "types": ["webpack-env", "mocha"]
+    "types": ["mocha"]
   }
 }
