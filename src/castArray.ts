@@ -1,9 +1,9 @@
-export default function castArray<T>(v: T | T[] | undefined): T[] {
+export default function castArray<T>(v: T[] | T | null | undefined): T[] {
+  if (v == null) {
+    return [];
+  }
   if (v instanceof Array) {
     return v;
-  }
-  if (v === undefined || v === null) {
-    return [];
   }
   return [v];
 }

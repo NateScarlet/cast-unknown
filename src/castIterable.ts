@@ -1,5 +1,7 @@
-export default function castIterable<T>(v: Iterable<T> | T): Iterable<T> {
-  if (v === undefined || v === null) {
+export default function castIterable<T>(
+  v: Iterable<T> | T | null | undefined
+): Iterable<T> {
+  if (v == null) {
     return [];
   }
   if (
