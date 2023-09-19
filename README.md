@@ -14,11 +14,9 @@ Current supported cast target:
 - object
 - array
 - date
-- duration (need `moment` package installed)
-- milliseconds (need `moment` package installed)
 - promise
 - iterable
-- one (one and the only one item from given iterable, otherwise undefined)
+- sole item (one and the only one item from given iterable, otherwise undefined)
 - nonNull (not null or undefined)
 
 ```javascript
