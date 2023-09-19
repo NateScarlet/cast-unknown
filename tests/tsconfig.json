@@ -1,6 +1,10 @@
 {
   "extends": "../tsconfig.json",
+  "include": ["*.spec.ts"],
   "compilerOptions": {
-    "types": ["mocha"]
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "types": ["mocha"],
+    "outDir": "out",
   }
 }

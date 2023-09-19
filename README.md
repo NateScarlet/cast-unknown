@@ -22,63 +22,70 @@ Current supported cast target:
 - nonNull (not null or undefined)
 
 ```javascript
-import cast from 'cast-unknown';
+import {
+  castString,
+  castNumber,
+  castObject,
+  castArray,
+  castDate,
+  castPromise,
+  castIterable,
+  castSoleItem,
+  castNonNull,
+  CastError,
+} from 'cast-unknown';
 
-cast.string(1);
+castString(1);
 // '1'
-cast.number('2');
+castNumber('2');
 // 2
-cast.object(3);
-// <throws cast.CastError>
-cast.array(4);
+castObject(3);
+// <throws CastError>
+castArray(4);
 // [4]
-cast.array([5]);
+castArray([5]);
 // [5]
-cast.array(null);
+castArray(null);
 // []
-cast.array(undefined);
+castArray(undefined);
 // []
-cast.array([null]);
+castArray([null]);
 // [null]
-cast.array([undefined]);
+castArray([undefined]);
 // [undefined]
-cast.date('2019-01-01 12:00');
-// <same as `new Date('2019-01-01 12:00')`, but throws cast.CastError if value invalid>
-cast.duration('P1D');
-// <same as `moment.duration("PT1D")`, but throws cast.CastError if value invalid>
-cast.milliseconds('P1D');
-// <same as `cast.duration("PT1D").asMilliseconds()`>
-cast.promise(6);
+castDate('2019-01-01 12:00');
+// <same as `new Date('2019-01-01 12:00')`, but throws CastError if value invalid>
+castPromise(6);
 // async () => 6
-cast.promise(() => 7);
+castPromise(() => 7);
 // async () => 7
-cast.promise(async () => 8);
+castPromise(async () => 8);
 // async () => 8
-cast.iterable(9);
+castIterable(9);
 // [9]
-const generator = (function*() {
+const generator = (function* () {
   for (let i; i < 10; i++) {
     yield i;
   }
 })();
-cast.iterable(generator);
+castIterable(generator);
 // generator
-cast.iterable(null);
+castIterable(null);
 // []
-cast.iterable(undefined);
+castIterable(undefined);
 // []
-cast.one(11);
+castOne(11);
 // 11
-cast.one([12, 13]);
+castOne([12, 13]);
 // undefined
-cast.one([14]);
+castOne([14]);
 // 14
-cast.nonNull(15);
+castNonNull(15);
 // 15
-cast.nonNull(null);
-// <throws cast.CastError>
-cast.nonNull(undefined);
-// <throws cast.CastError>
+castNonNull(null);
+// <throws CastError>
+castNonNull(undefined);
+// <throws CastError>
 ```
 
 ## related

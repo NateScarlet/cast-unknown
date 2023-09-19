@@ -3,4 +3,4 @@
 # recursive: true
 extension:
   - ts
-spec: tests/**/*.spec.*
+spec: tests/**/*.spec.js
