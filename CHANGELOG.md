@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0](https://github.com/NateScarlet/cast-unknown/compare/v0.1.9...v0.2.0) (2023-09-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* rename exports and remove moment related function
+
+### Features
+
+* rename exports and remove moment related function ([3ca4783](https://github.com/NateScarlet/cast-unknown/commit/3ca47836d5fb61edcc900323b6cd8eeeef3fdd6c))
+
 ### [0.1.9](https://github.com/NateScarlet/cast-unknown/compare/v0.1.8...v0.1.9) (2022-01-27)
 
 
